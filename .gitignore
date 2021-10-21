@@ -1,3 +1,10 @@
 *__pycache__*
 *DS_Store*
 *prefix_*/*
+
+# latex output
+*.aux
+*.log
+*.out
+*.pdf
+
