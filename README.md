@@ -43,7 +43,11 @@ python ~/md5-pdf-hashquine/prefix_loop.py
 
 就可以依次在 `prefix_1`, `prefix_2`, ... `prefix_15` 等目录中得到对应的 collision 文件以及 prefix。
 
-然后用 `extract_image_from_prefix.py` 得到每一位的图片，图片保存于 `processed/{i}/{j}.jpg`。这里为了方便调试，`extract_image_from_prefix.py` 每次只会处理单一一位的 16 张图片，所以请手动修改 `extract_image_from_prefix.py` 中的 `digit` 参数。
+然后用 `extract_image_from_prefix.py` 得到每一位的图片，图片保存于 `processed/{i}/{j}.jpg`。这里为了方便调试，`extract_image_from_prefix.py` 每次只会处理单一一位的 16 张图片，所以请手动修改 `extract_image_from_prefix.py` 中的 `digit` 参数：
+
+```
+python3 extract_image_from_prefix.py --digit=3
+```
 
 最后，进入 `tex` 目录，在 `main.tex` 中修改最上方 32 位对应的值，即可得到一个包含自己 md5 的 pdf。
 
