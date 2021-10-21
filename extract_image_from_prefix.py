@@ -12,6 +12,7 @@ def extract(digit):
         if digit == 1:
             data = SOF + SOF.join(data.split(SOF)[1:])
         else:
+            print(len(data.split(b"stream\n")))
             data = data.split(b"stream\n")[-1]
         data = EOF.join(data.split(EOF)[:-1]) + EOF
     
