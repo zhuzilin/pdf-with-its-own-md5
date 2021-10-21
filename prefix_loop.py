@@ -156,6 +156,10 @@ for i in range(32):
             assert len(data1) == len(prev_prefix[k]), f"{len(data1)} vs {len(prev_prefix[k])}"
             assert len(data2) == len(prev_prefix[k])
 
+        image = b"\xff\xd8" + b"\xff\xd8".join(data1.split(b"\xff\xd8")[1:])
+        with open(f"{BASE_DIR}/prefix_{i + 1}/{img_name}", "wb") as f:
+            f.write(image)
+
         data1 = pad(data1)
         data2 = pad(data2)
         assert (len(data1) - 12) % 64 == 0
