@@ -58,4 +58,4 @@ python3 extract_image_from_prefix.py --digit=3
 
 - 为了让 pdf 的 header 保持不变，需要保证所有图片的大小相同。
 
-- hashclash 有时会卡死，可以直接杀死重试。如果多次重试都会卡死，可以通过修改 `script/poc_no.sh` 中的 `data` 值来重新运行。
+- hashclash 有时会卡死，可以直接杀死重试。如果多次重试都会卡死，可以通过修改 `script/poc_no.sh` 中的 `data` 值来重新运行。另一种重试的方法是删除最后一个生成的 jpg 文件，例如删除 `prefix_5/D.jpg`，从而让 hashclash 重新寻找上一个 prefix。
