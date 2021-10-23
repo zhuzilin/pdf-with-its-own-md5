@@ -2,9 +2,7 @@
 *DS_Store*
 *prefix_*/*
 
-# latex output
+# pdflatex output
 *.aux
 *.log
 *.out
-*.pdf
-

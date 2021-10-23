@@ -49,7 +49,7 @@ python ~/md5-pdf-hashquine/prefix_loop.py
 python3 extract_image_from_prefix.py --digit=3
 ```
 
-最后，进入 `tex` 目录，在 `main.tex` 中修改最上方 32 位对应的值，即可得到一个包含自己 md5 的 pdf。
+最后，在 `main.tex` 中修改最上方 32 位对应的值，即可得到一个包含自己 md5 的 pdf。
 
 
 ## 注意事项：
