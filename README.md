@@ -2,6 +2,10 @@
 
 MD5 is a famous cryptographic hash function that was proved to be insecure by Xiaoyun Wang's team in 2004. Due to its insecurity, we could create a pdf that shows its own MD5. However, it's time consuming to create a pdf with its MD5 and that's what this project is for.
 
+![example](doc/example.png)
+
+[`main.pdf`](./main.pdf) is a example of the template.
+
 ## Usage
 
 1. Install pdflatex.
