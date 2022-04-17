@@ -6,3 +6,8 @@
 *.aux
 *.log
 *.out
+/main.bbl
+/main.blg
+/main.bak.tex
+/main.synctex.gz
+/raw_nums_bmp
