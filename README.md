@@ -34,19 +34,20 @@ MD5 is a famous cryptographic hash function that was proved to be insecure by Xi
 
     Right now, the `main.tex` is almost the starter code of overleaf.
 
-3. Compute the MD5 of the `main.tex` and add it back to the pdf.
+3. Compile `main.tex` to get `main.pdf` files.
 
-    After creating the pdf, you could compile the `main.tex` with:
+    you could compile the `main.tex` with:
 
     ```bash
     pdflatex main.tex
     ```
 
-    and generate the `main.pdf`.
+    and this generate the `main.pdf`.
 
-4. Modify the images used in `main.tex` to match the MD5 of the `main.tex`.
+4. Modify the images used in `main.tex` to match the MD5 of `main.pdf`.
 
-    * You can use scripts to change them automatically:
+    * You can use scripts to do this automatically:
+
         ```bash
         python3 ./updateMD5.py
         ```
@@ -54,6 +55,7 @@ MD5 is a famous cryptographic hash function that was proved to be insecure by Xi
     * Or you can do this manually:
 
         * First you need to calculate the MD5 of `main.tex` with:
+
         ```bash
         md5sum main.pdf
         ```
