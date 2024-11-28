@@ -1,6 +1,7 @@
 import os
 
-BASE_DIR = "/root/md5-pdf-hashquine" 
+
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 SOF = b"\xff\xd8"
 EOF = b"\xff\xd9"
@@ -111,8 +112,8 @@ for i in range(32):
         # The hashclash need to copy the prefix file to the ipc_workdir directory...
         print(f"cp {prefix_filename} prefix.txt")
         os.system(f"cp {prefix_filename} prefix.txt")
-        print('sh ~/hashclash/scripts/poc_no.sh prefix.txt')
-        os.system(f'sh ../scripts/poc_no.sh prefix.txt')
+        print('sh ~/hashclash/scripts/generic_ipc.sh prefix.txt')
+        os.system(f'sh ../scripts/generic_ipc.sh prefix.txt')
         col1_path = f"{BASE_DIR}/prefix_{i + 1}/collision_{j}_1.bin"
         col2_path = f"{BASE_DIR}/prefix_{i + 1}/collision_{j}_2.bin"
         os.system(f"cp collision1.bin {col1_path}")
